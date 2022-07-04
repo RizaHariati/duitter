@@ -28,6 +28,9 @@
   .btn-icon {
     @apply h-6 w-6 text-white;
   }
+  .btn-submit {
+    @apply w-32 py-1 ml-auto rounded-full bg-sky-600  hover:bg-sky-700 disabled:opacity-50 transition-all text-white font-medium;
+  }
   .icon-link {
     @apply text-sky-400 w-5 h-5 cursor-pointer transition-transform ease-out hover:scale-150 duration-150 active:text-sky-300;
   }

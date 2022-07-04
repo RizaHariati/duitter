@@ -14,7 +14,9 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import SidebarRow from "./SidebarRow";
+import { signIn, signOut, useSession } from "next-auth/react";
 const Sidebar = () => {
+  const { data: session } = useSession();
   return (
     <div className="h-screen w-full col-span-1 md:col-span-2 py-5 flex flex-col justify-between items-center">
       <div>
@@ -37,7 +39,11 @@ const Sidebar = () => {
           <SidebarRow Icon={MailIcon} title="Messages" />
           <SidebarRow Icon={BookmarkIcon} title="Bookmarks" />
           <SidebarRow Icon={CollectionIcon} title="Lists" />
-          <SidebarRow Icon={UserIcon} title="Profile" />
+          <SidebarRow
+            onClick={session ? signOut : signIn}
+            Icon={UserIcon}
+            title={session ? "Sign Out" : "Sign In"}
+          />
           <SidebarRow Icon={DotsCircleHorizontalIcon} title="More" />
         </div>
 

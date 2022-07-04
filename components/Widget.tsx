@@ -3,7 +3,7 @@ import React from "react";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 const Widget = () => {
   return (
-    <div className="hidden md:block h-full w-full col-span-3 p-5">
+    <div className="hidden lg:block h-full w-full col-span-3 p-5">
       {/* ---------------------------- search ---------------------------- */}
       <div className="flex items-center gap-2 bg-gray-600 p-3 rounded-full ">
         <SearchIcon className="w-5 h-5" />
